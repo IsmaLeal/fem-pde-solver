@@ -24,14 +24,6 @@ From the repo root:
 python3 -m src.cli --pde poisson --domain square
 ```
 
-## Run the CLI (console script)
-
-After `pip install -e .`:
-
-```bash
-fem_solver --pde poisson --domain square
-```
-
 ## Example run
 
 Command:
