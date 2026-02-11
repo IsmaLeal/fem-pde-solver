@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fem-portfolio"
+version = "0.1.0"
+description = "A 2D Finite-Element Method solver"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "Ismael Leal", email = "ismael.leal.2002@gmail.com" }
+]
+dependencies = [
+  "numpy",
+  "matplotlib",
+  "scipy",
+  "tqdm",
+  "meshpy"
+]
+
+[project.scripts]
+fem_solver = "src.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src", "src.*"]
